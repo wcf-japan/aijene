@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.description {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+.button-group {
+    margin: 30px 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(45deg, #f093fb, #f5576c);
+    color: white;
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(240, 147, 251, 0.4);
+}
+
+.video-container {
+    margin: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#webcam {
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 3px solid #667eea;
+}
+
+.log-container {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.log-container h3 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.log-content {
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+    color: #495057;
+}
+
+.log-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.log-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.log-content::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.log-content::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .button-group {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    #webcam {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+}
+
+/* アニメーション */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    animation: fadeIn 0.6s ease-out;
+}

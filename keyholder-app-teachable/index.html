@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="キーホルダー識別テスト - カメラを使った物体識別アプリ">
+    <title>キーホルダー識別テスト</title>
+    <script src="config.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔑 キーホルダー識別テスト</h1>
+        <p class="description">カメラを使ってキーホルダーを識別するテストアプリです</p>
+        
+        <div class="button-group">
+            <button id="start-camera" class="btn btn-primary">📷 カメラを起動</button>
+            <button id="predict" class="btn btn-secondary">🔍 判定</button>
+        </div>
+        
+        <div class="video-container">
+            <video id="webcam" autoplay playsinline width="224" height="224" style="display:none;"></video>
+        </div>
+        
+        <div id="log-box" class="log-container">
+            <h3>📝 操作ログ</h3>
+            <div class="log-content">[状態ログ]</div>
+        </div>
+    </div>
+</body>
+</html>

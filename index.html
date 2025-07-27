@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="キーホルダー識別テスト - カメラを使った物体識別アプリ">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>キーホルダー識別テスト</title>
+    <script src="config.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- カメラ映像エリア -->
+        <div class="camera-center">
+            <div class="camera-frame">
+                <h3>カメラ映像</h3>
+                <video id="webcam" autoplay playsinline muted width="224" height="224" style="display:none;"></video>
+            </div>
+        </div>
+        
+        <!-- 判定結果・信頼度 横並び -->
+        <div class="result-row">
+            <div class="result-card">
+                <h3>判定結果</h3>
+                <div id="prediction-result" class="result-text">-</div>
+            </div>
+            <div class="result-card">
+                <h3>信頼度</h3>
+                <div class="confidence-container">
+                    <div id="confidence-bar" class="confidence-bar">
+                        <div id="confidence-fill" class="confidence-fill"></div>
+                    </div>
+                    <div id="confidence-text" class="confidence-text">-</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 丸いボタン 横並び -->
+        <div class="circle-button-group">
+            <button id="start-camera" class="circle-btn btn-primary">カメラ起動</button>
+            <button id="switch-camera" class="circle-btn btn-secondary" style="display:none;">カメラ切り替え</button>
+            <button id="predict" class="circle-btn btn-secondary">判定</button>
+        </div>
+        
+        <!-- 操作ログエリア -->
+        <div id="log-box" class="log-container">
+            <h3>📝 操作ログ</h3>
+            <div class="log-content">[状態ログ]</div>
+        </div>
+    </div>
+</body>
+</html>
