@@ -3,7 +3,7 @@ const CONFIG = {
     // Teachable MachineモデルのURL
     // 新しいモデルを作成したら、このURLを更新してください
     // 例: "https://teachablemachine.withgoogle.com/models/YOUR_NEW_MODEL_ID/"
-    MODEL_URL: "https://teachablemachine.withgoogle.com/models/PhAsdNoeQ/",
+    MODEL_URL: "https://teachablemachine.withgoogle.com/models/XytTNSgUE/",
     
     // クラス名（Teachable Machineで設定したクラス名に合わせて変更）
     // 実際のクラス名: "阿部輝", "お茶"
