@@ -151,6 +151,26 @@ document.addEventListener('DOMContentLoaded', async () => {
     log('デバイス: ' + (navigator.userAgent.includes('iPhone') ? 'iPhone' : 'その他'));
     log('ブラウザ: ' + navigator.userAgent.split(' ').pop());
     
+    // iPhone用の追加設定
+    if (navigator.userAgent.includes('iPhone')) {
+        log('📱 iPhone検出: 最適化設定を適用中...');
+        
+        // タッチイベントの最適化
+        document.addEventListener('touchstart', function() {}, {passive: true});
+        document.addEventListener('touchmove', function() {}, {passive: true});
+        
+        // ズーム無効化
+        document.addEventListener('gesturestart', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('gesturechange', function(e) {
+            e.preventDefault();
+        });
+        document.addEventListener('gestureend', function(e) {
+            e.preventDefault();
+        });
+    }
+    
     // Teachable Machineモデルを読み込み
     await loadTeachableMachineModel();
     
